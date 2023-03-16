@@ -1,12 +1,12 @@
 module.exports = {
   albumFromID: (id) =>
-    `https://www.jiosaavn.com/api.php?__call=content.getAlbumDetails&_format=json&cc=in&_marker=0%3F_marker=0&albumid=${id}`,
+    `https://www.jiosaavn.com/api.php?__call=content.getAlbumDetails&_format=json&cc=us&_marker=0%3F_marker=0&albumid=${id}`,
   albumsearchFromSTRING: (query) =>
-    `https://www.jiosaavn.com/api.php?__call=autocomplete.get&_format=json&_marker=0&cc=in&includeMetaTags=1&query=${query
+    `https://www.jiosaavn.com/api.php?__call=autocomplete.get&_format=json&_marker=0&cc=us&includeMetaTags=1&query=${query
       .split(" ")
       .join("+")}`,
   playlistsearchFromSTRING: (query) =>
-    `https://www.jiosaavn.com/api.php?__call=autocomplete.get&_format=json&_marker=0&cc=in&includeMetaTags=1&query=${query
+    `https://www.jiosaavn.com/api.php?__call=autocomplete.get&_format=json&_marker=0&cc=us&includeMetaTags=1&query=${query
       .split(" ")
       .join("+")}`,
   playlistFromID: (id) =>
@@ -14,7 +14,7 @@ module.exports = {
   songFromID: (id) =>
     `https://www.jiosaavn.com/api.php?__call=song.getDetails&cc=in&_marker=0%3F_marker%3D0&_format=json&pids=${id}`,
   songsearchFromSTRING: (query) =>
-    `https://www.jiosaavn.com/api.php?p=1&_format=json&_marker=0&api_version=4&ctx=wap6dot0&n=10&__call=search.getResults&q=${query
+    `https://www.jiosaavn.com/api.php?cc=us&p=1&_format=json&_marker=0&api_version=4&ctx=wap6dot0&n=10&__call=search.getResults&q=${query
       .split(" ")
       .join("+")}`,
   lyricsFromID: (id) =>
